@@ -1,0 +1,167 @@
+@font-face {
+    font-family: 'Anurati';
+    /* Asegúrate de que el nombre del archivo entre las comillas sea EXACTAMENTE igual al que descargaste */
+    src: url('anurati-regular.otf');
+}
+:root {
+    --bg-red: #9E0B0F;
+    --accent-yellow: #F3C853;
+    --accent-orange: #E54718;
+    --text-white: #FFFFFF;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif; 
+    background-color: var(--bg-red);
+    color: var(--text-white);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    min-height: 100vh; 
+ }
+
+.menu {
+    width: 90%; /* Ocupará el 90% de la pantalla del celular */
+    max-width: 700px; /* Pero nunca pasará de 700px en computadora */
+    padding-top: 30px;
+    background-color: transparent;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Anurati', sans-serif; /* Anurati solo en el logo */
+    margin: 0;
+    font-size: 4em;
+    letter-spacing: 5px;
+}
+
+.para {
+    margin: 0 0 40px;
+    font-size: 1.5rem;
+    color: var(--text-white);
+    letter-spacing: 2px;
+}
+
+section h3 {
+    font-size: 1.5em;
+    color: var(--bg-red); /* Letra roja */
+    font-weight: 750;
+    background-color: var(--accent-yellow); /* Fondo amarillo */
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 0 auto 20px;
+}
+
+.section {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+.section ul {
+    list-style-type: none;
+    margin: 0px 70px 0px 70px;
+    padding: 0px;
+    text-align: left;
+    flex: 2;
+}
+
+.section ul li {
+    font-size: 1.2em;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.images {
+    background-color: var(--accent-orange);
+    width: 280px;
+    height: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50% 0 0 50%;
+}
+
+.images1 {
+    background-color: var(--accent-orange);
+    width: 280px;
+    height: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    border-radius: 0 50% 50% 0;
+}
+
+.image-container {
+    width: 250px;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 80%;
+    margin: 0 20px;
+}
+
+.main-course-image {
+    background-image: url('main.png');
+    order: -1;
+}
+
+.appetizers-image {
+    background-image: url('appetizers.png');
+}
+
+.beverages-image {
+    background-image: url('beverages.png');
+    order: -1;
+}
+
+.beverages-image {
+    background-image: url('beverages.png');
+}
+
+.contact {
+    display: flex;
+    padding-left: 50px;
+}
+
+.contact p {
+    background-color: var(--accent-yellow); /* Botones de contacto amarillos */
+    font-weight: 700;
+    color: var(--bg-red);
+    padding: 10px;
+    border-radius: 50px;
+    display: inline-block;
+    margin: 0 auto 20px;
+}
+
+@media (max-width: 768px) {
+    /* Convierte las filas en columnas */
+    .section {
+        flex-direction: column; 
+        gap: 30px; /* Agrega espacio entre la foto y la lista */
+    }
+
+    /* Reduce los márgenes a los lados de la lista de platillos */
+    .section ul {
+        margin: 0 10px; 
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Ajusta el contacto para que no se salga de la pantalla */
+    .contact {
+        padding-left: 0;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
